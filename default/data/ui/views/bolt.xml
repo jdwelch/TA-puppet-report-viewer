@@ -29,12 +29,12 @@
       <table>
         <search>
           <query>sourcetype="puppet:bolt" event_type="bolt_apply"
-| eval "certname"=mvdedup('host'), "log"=mvdedup('logs{}.message')
+| eval "certname"=mvdedup('host'), "log"=mvdedup('logs{}.message'), "plan_name"=mvdedup('plan_name')
 | eval "strf_time"=strftime(_time, "%Y-%m-%d %T %:z")
 | rename "certname" as "Host"
-| rename "strf_time" as "Report Time"
+| rename "strf_time" as "Report Time" | rename "plan_name" as "Plan"
 | rename "log" as "Log"
-| table Host, "Report Time", "Log"
+| table Host, "Report Time", "Plan", "Log"
 | sort - "Report Time"</query>
           <earliest>-7d@h</earliest>
           <latest>now</latest>
