@@ -1,0 +1,48 @@
+<setup>
+
+  <block title="Part 1: Configure This App">
+    <text>Setup page with custom endpoints</text>
+
+    <text>Instructions for this section: Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</text>
+
+  </block>
+
+  <block title="A text input" endpoint="puppet_report_viewer/setup_workflow" entity="setupentity">
+
+    <text>Instructions for this section: Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis.</text>
+
+    <input field="field_1">
+      <label>Enter your text. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</label>
+      <type>text</type>
+    </input>
+
+  </block>
+
+  <block title="Enable and set a numeric value" endpoint="puppet_report_viewer/setup_workflow" entity="setupentity">
+
+    <text>Instructions for this section: Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis.</text>
+
+    <input field="field_2_boolean">
+      <label>Enable this thing?</label>
+      <type>bool</type>
+    </input>
+
+    <input field="field_3" endpoint="puppet_report_viewer/setup_workflow" entity="setupentity">
+      <label>Set this number (minimum value=60)</label>
+      <type>text</type>
+    </input>
+
+  </block>
+
+  <block title="A boolean value" endpoint="puppet_report_viewer/setup_workflow" entity="setupentity">
+
+    <text>Instructions for this section: Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis.</text>
+
+    <input field="field_4_boolean">
+      <label>Enable this thing? Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas.</label>
+      <type>bool</type>
+    </input>
+
+  </block>
+
+</setup>
